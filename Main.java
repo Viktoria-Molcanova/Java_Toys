@@ -6,8 +6,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         while (true) {
             System.out.print("""
-
-                    Main menu:
+                    Выберите действие :
                     1. Добавить игрушку в призовой фонд
                     2. Изменить частоту выпадения игрушки
                     3. Розыгрыш призов 

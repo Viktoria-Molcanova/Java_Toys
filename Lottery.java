@@ -9,7 +9,9 @@ public class Lottery {
     private static PriorityQueue<Toy> prizes = new PriorityQueue<>();
 
     private static int idCounter = 0;
-
+    
+// Метод добавления игрушки
+    
     public void addToy() {
         Scanner scan = new Scanner(System.in);
         String title;
@@ -43,7 +45,19 @@ public class Lottery {
             break;
         }
     }
+     // Исключение числовой формат данных
 
+    private static boolean isDigit(String s) throws NumberFormatException {
+        try {
+            Integer.parseInt(s);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
+
+//Метод изменения частоты выпадения игрушки
+    
     public void setFrequency() {
         Scanner scan = new Scanner(System.in);
         System.out.print("Введите ID игрушки : ");
@@ -69,16 +83,9 @@ public class Lottery {
             System.out.println("Ошибка ввода.Попробуйте снова");
         }
     }
-
-    private static boolean isDigit(String s) throws NumberFormatException {
-        try {
-            Integer.parseInt(s);
-            return true;
-        } catch (NumberFormatException e) {
-            return false;
-        }
-    }
-
+    
+    //Метод выпадения игрушки
+    
     public Toy getPrize() {
         if (prizes.size() == 0) {
             Random rnd = new Random();
@@ -91,7 +98,9 @@ public class Lottery {
         }
         return prizes.poll();
     }
-
+    
+//Метод сохранение результата в файле Результат.txt
+    
     private void saveResult(String text) {
         File file = new File("Результат.txt");
         try {

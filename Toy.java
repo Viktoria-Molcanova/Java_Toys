@@ -29,7 +29,7 @@ public class Toy implements Comparable<Toy> {
     }
 
     public String getInfo() {
-        return String.format("ID: %d, Название игрушки: %s", toyId, toyTitle);
+        return String.format("id игрушки: %d, Название игрушки: %s", toyId, toyTitle);
     }
 
     @Override

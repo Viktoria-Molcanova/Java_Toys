@@ -15,7 +15,7 @@ public class Lottery {
         String title;
         int frequency;
         while (true) {
-            System.out.print("Введите название игрушки на английском");
+            System.out.print("Введите название игрушки на английском: ");
             title = scan.nextLine();
             if (title.isEmpty()) {
                 System.out.println("Ошибка ввода попробуйте снова");
